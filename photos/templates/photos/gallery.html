@@ -16,14 +16,53 @@
                     Categories
                     </div>
                     <ul class="list-group list-group-flush">
+                      <li class="list-group-item">All</li>
                       <li class="list-group-item">An item</li>
                       <li class="list-group-item">A second item</li>
                       <li class="list-group-item">A third item</li>
+                      <li class="list-group-item"><a class="btn btn-dark btn-block btn-sm m-1" href="{% url 'add' %}">Add Photo</a></li>
                     </ul>
                   </div>
             </div>
             <div class="col-md-9">
-                Gallery
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card" >
+                            <img src="https://static01.nyt.com/images/2021/09/14/science/07CAT-STRIPES/07CAT-STRIPES-mediumSquareAt3X-v2.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <small>Category: Pets</small>
+                            </div>
+                            <a href="{% url 'photo' %}" class="btn btn-outline-dark btn-sm">View</a>
+                          </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card" >
+                            <img src="https://static01.nyt.com/images/2021/09/14/science/07CAT-STRIPES/07CAT-STRIPES-mediumSquareAt3X-v2.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <small>Category: Pets</small>
+                            </div>
+                            <a href="{% url 'photo' %}" class="btn btn-outline-dark btn-sm">View</a>
+                          </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card" >
+                            <img src="https://static01.nyt.com/images/2021/09/14/science/07CAT-STRIPES/07CAT-STRIPES-mediumSquareAt3X-v2.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <small>Category: Pets</small>
+                            </div>
+                            <a href="{% url 'photo' %}" class="btn btn-outline-dark btn-sm">View</a>
+                          </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card" >
+                            <img src="https://static01.nyt.com/images/2021/09/14/science/07CAT-STRIPES/07CAT-STRIPES-mediumSquareAt3X-v2.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                              <small>Category: Pets</small>
+                            </div>
+                            <a href="{% url 'photo' %}" class="btn btn-outline-dark btn-sm">View</a>
+                          </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
