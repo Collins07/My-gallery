@@ -32,7 +32,7 @@
                         <div class="card" >
                             <img src="{{photo.image.url }}" class="card-img-top" alt="...">
                             <div class="card-body">
-                              <small>Category: Pets</small>
+                              <small>Category: {{photo.category.name}}</small>
                             </div>
                             <a href="{% url 'photo' %}" class="btn btn-outline-dark btn-sm">View</a>
                           </div>
