@@ -1,10 +1,14 @@
+from unicodedata import category
 from django.shortcuts import render, redirect
 from django.http import HttpResponse,Http404
+from .models import Category, Photo
 
 # Create your views here.
 
 def gallery(request):
-    return render (request, 'photos/gallery.html')
+    categories = Category.objects.all()
+    context = {'categories':categories}
+    return render (request, 'photos/gallery.html', context)
 
 def viewPhoto(request):
     return render (request, 'photos/photo.html')
