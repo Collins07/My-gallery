@@ -1,8 +1,8 @@
-from django.urls import path
+from django.conf.urls import url
 from . import views
 
 urlpatterns = [
-    path('', views.gallery, name='gallery',),
-    path('photo/<str:pk>/',views.viewPhoto, name='photo',),
-    path('add/', views.addPhoto, name='add',)
+    url('', views.gallery, name='gallery',),
+    url('photo/<str:pk>/',views.viewPhoto, name='photo',),
+    url('add/', views.addPhoto, name='add',)
 ]
