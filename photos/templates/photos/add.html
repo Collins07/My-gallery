@@ -13,21 +13,38 @@
             <div class="col-md-5">
                 <a class="btn btn-dark my-3" href="{% url 'gallery' %}">Go Back </a> Form
                 <div class="card">
-                    <form action="">
+                    
+                    <form action="" method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
                         <div class="form-group m-3">
                             <label >Description</label>
-                            <input class="form-control" placeholder="Enter description" type="text" >
+                            <input name="description" class="form-control" placeholder="Enter description" type="text" required >
                         </div>
 
-                        <div class="form-group mb-3">
+                        <div class="form-group m-3">
                             <label >Select Category</label>
-                            <select name="category" class="form-control-file" type="file" >
+                            <select name="category" class="form-control" >
+                                <option value="none">select a category.....</option>
+
+                                {% for category in categories %}
+                                <option value="{{category.id}}">{{category.name}}</option>
+                                {% endfor %}
+
+                            </select>
+                        </div>
+
+                        <div class="form-group m-3">
+                            <label >Create a new Category </label>
+                            <input name="category_new" class="form-control" placeholder="create a new category" type="text" >
                         </div>
 
                         <div class="form-group m-3">
                             <label >Upload image</label> <br>
-                            <input class="form-control-file" type="file" >
+                            <input name="image" class="form-control-file" type="file" required>
                         </div>
+
+                        <button type="submit" class="btn btn-primary m-3" >Add</button>
+
                     </form>
                 </div>
             </div>
