@@ -1,3 +1,4 @@
+from tkinter import image_names
 from unicodedata import category
 from django.shortcuts import render, redirect
 from django.http import HttpResponse,Http404
@@ -22,7 +23,12 @@ def gallery(request):
 
 
 def viewPhoto(request):
-    photo = Photo.objects.get()
+
+    image = request.GET.get('image')
+
+    photo = Photo.objects.filter(image)
+    
+
     return render (request, 'photos/photo.html', {'photo':photo})
 
 
