@@ -1,5 +1,4 @@
 from enum import unique
-from tkinter import image_names
 from unicodedata import category
 from django.shortcuts import render, redirect
 from django.http import HttpResponse,Http404
