@@ -1,3 +1,4 @@
+from enum import unique
 from tkinter import image_names
 from unicodedata import category
 from django.shortcuts import render, redirect
@@ -24,7 +25,7 @@ def gallery(request):
 
 def viewPhoto(request):
 
-    photo = Photo.objects.get()
+    photo = Photo.objects.filter(uniqueId=1)
     return render (request, 'photos/photo.html', {'photo':photo})
 
 
