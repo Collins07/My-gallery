@@ -24,11 +24,7 @@ def gallery(request):
 
 def viewPhoto(request):
 
-    image = request.GET.get('image')
-
-    photo = Photo.objects.filter(image)
-    
-
+    photo = Photo.objects.get()
     return render (request, 'photos/photo.html', {'photo':photo})
 
 
@@ -53,6 +49,7 @@ def addPhoto(request):
             category = category,
             description = data['description'],
             image = image,
+            date_created= data['date_created'],
         )    
 
         return redirect ('gallery')   

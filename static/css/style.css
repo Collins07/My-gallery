@@ -18,7 +18,7 @@ background: linear-gradient(to right, #004e92, #000428); /* W3C, IE 10+/ Edge, F
 
 border-radius: 72px 2px;
 }
-h4{
+h4, button{
     color: #659efa;
 }
 .card{
