@@ -56,7 +56,7 @@
             <div class="col-md-3">
                 <div class="card" id="cardheader">
                     <div id="categories" class="card-header">
-                    Categories
+                    View by Categories
                     </div>
                     <ul class="list-group list-group-flush">
                       <li class="list-group-item"><a href="{% url 'gallery' %}">All</a></li>
@@ -80,7 +80,7 @@
                               <small>Category: <span>{{photo.category.name}}</span></small> <br>
                               <small>Date: <span>{{photo.date_created}}</span></small>
                             </div>
-                            <a id="view" href="{% url 'photo' %}?photo={{photo.slug}}" class="btn btn-outline-dark btn-sm">View</a>
+                            <a id="view" href="{% url 'photo'  %}?photo={{photo.slug}}" class="btn btn-outline-dark btn-sm">View</a>
                           </div>
                     </div>
                     {% empty %}
