@@ -22,9 +22,9 @@ def gallery(request):
 
 
 
-def viewPhoto(request):
+def viewPhoto(request,pk):
 
-    photo = Photo.objects.filter(uniqueId=1)
+    photo = Photo.objects.filter(id=pk)
     return render (request, 'photos/photo.html', {'photo':photo})
 
 
