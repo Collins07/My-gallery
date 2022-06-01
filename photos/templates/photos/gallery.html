@@ -80,7 +80,7 @@
                               <small>Category: <span>{{photo.category.name}}</span></small> <br>
                               <small>Date: <span>{{photo.date_created}}</span></small>
                             </div>
-                            <a id="view" href="{% url 'photo' photo.id  %}?photo={{photo.slug}}" class="btn btn-outline-dark btn-sm">View</a>
+                            <a id="view" href="{% url 'photo' photo.slug  %}?photo={{photo.slug}}" class="btn btn-outline-dark btn-sm">View</a>
                           </div>
                     </div>
                     {% empty %}
